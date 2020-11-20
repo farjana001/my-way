@@ -1,0 +1,77 @@
+@import '../../../Style/Style';
+
+
+.navbar-bg{
+ background-color: #fff;
+ box-shadow: 0 3px 6px rgb(231, 230, 230);
+}
+.menu-link{
+    color: $default-color;
+    margin-right: 46px;
+    letter-spacing: 0.49px;
+}
+.menu-link:hover{
+    text-decoration: none;
+    color: $default-color;
+    letter-spacing: 0.49px;
+}
+.dropdown-title{
+    color: $default-color;
+   
+}
+.dropdown-btn{
+    margin-top: -6px;
+    margin-right: 30px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: $default-color;
+}
+.sign-up{
+    background: none;
+    border: none;
+    color: $brand-color;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 16.2px;
+    margin-top: -5px;
+}
+.login-btn{
+    background-color: $brand-color;
+    font-weight: 600;
+    height: 38px;
+    width: 134px;
+    padding: 0;
+    border-radius: 19px;
+    color: white;
+    margin: -5px 0 0 -10px;
+    border: none;
+    transition: all 0.5s ease;
+}
+.login-btn:hover{
+    transform: scale(1.1);
+    color: #fff;
+    border-radius: 25px;
+}
+.menubar{
+    float: right;
+}
+.dropdown-menu{
+    border: none;
+    background: none;
+}
+.dropdown-item{
+    padding: 10px;
+    background-color: #fff;
+    border-bottom: 1px solid rgb(233, 231, 231);
+    border-radius: 5px;
+}
+.dropdown-item:last-child{
+    margin-top: 0;
+    border-bottom: none;
+}
+.first-item{
+    margin-top: 20px;
+}
+.last-item{
+    border-bottom: none;
+}
