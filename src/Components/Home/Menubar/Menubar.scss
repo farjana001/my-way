@@ -52,18 +52,26 @@
     color: #fff;
     border-radius: 25px;
 }
+.login-btn:focus{
+    outline: none;
+}
 .menubar{
     float: right;
 }
 .dropdown-menu{
     border: none;
     background: none;
+    left: -51px;;
 }
 .dropdown-item{
     padding: 10px;
     background-color: #fff;
     border-bottom: 1px solid rgb(233, 231, 231);
     border-radius: 5px;
+}
+.dropdown-item.active{
+    background: none;
+    color: $default-color;
 }
 .dropdown-item:last-child{
     margin-top: 0;
@@ -75,3 +83,12 @@
 .last-item{
     border-bottom: none;
 }
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  
+    border-bottom: 5px solid #fff;
+    margin: 12px 0px -23px 87px;
+  }

@@ -1,1 +1,22 @@
 @import '../../../Style/Style';
+
+.body-wrapper{
+    height: 100vh;
+    margin-top: 170px;
+}
+.body-wrapper>h2{
+    color: $default-color;
+    font-size: 41px;
+    font-weight: 700;;
+    margin-bottom: 16px;
+}
+.body-wrapper>p{
+    font-size: 28px;
+    margin-bottom: 58px;
+}
+.body-wrapper>button{
+    height: 53px;
+    width: 236px;
+    border-radius: 27px;
+    font-size: 24px;
+}

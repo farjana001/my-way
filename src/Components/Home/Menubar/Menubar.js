@@ -4,8 +4,18 @@ import { Link } from 'react-router-dom';
 import './Menubar.scss';
 import logo from '../../../images/logo/MyWays Logo.png';
 import navbarIcon from '../../../images/icon/Instant logo.png';
+import LoginForm from '../../LoginForm/LoginForm';
+import { useState } from 'react';
 
 const Menubar = () => {
+    const [modalIsOpen,setIsOpen] = useState(false);
+    function openModal() {
+      setIsOpen(true);
+    }
+  
+    function closeModal(){
+      setIsOpen(false);
+    }
     return (
         <>
             <div className="navbar-bg">
@@ -18,6 +28,7 @@ const Menubar = () => {
                                 <NavDropdown className="dropdown-btn" title={
                                     <span className="dropdown-title">For You</span>
                                 } id="basic-nav-dropdown">
+                                    <div className="arrow-up"></div>
                                     <NavDropdown.Item className="first-item" href="#action/3.1">Find matching internship</NavDropdown.Item>
                                     <NavDropdown.Item href="#action/3.2">Hire right talent</NavDropdown.Item>
                                     <NavDropdown.Item className="last-item" href="#action/3.3">Work from home</NavDropdown.Item>
@@ -29,7 +40,8 @@ const Menubar = () => {
                             </Nav>
                         </Navbar.Collapse>
                         <button className="menu-link sign-up" to="/signUp">Sign Up</button>
-                        <button className="menu-link login-btn" to="/login">LOGIN</button>
+                        <button onClick={openModal} className="menu-link login-btn" to="/login">LOGIN</button>
+                        <LoginForm modalIsOpen={modalIsOpen} closeModal={closeModal} />
                     </Navbar>
                 </div>
             </div>
