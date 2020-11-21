@@ -58,3 +58,9 @@
     color: #000;
     font: normal normal 600 16px/21px Segoe UI;
 }
+
+@media screen and (max-width: 498px){
+    .modal-content{
+        // width: 100%;
+    }
+}

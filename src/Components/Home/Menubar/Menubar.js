@@ -9,32 +9,34 @@ import { useState } from 'react';
 import SignUpForm from '../../SignUpForm/SignUpForm';
 
 const Menubar = () => {
-    const [modalIsOpen, setIsOpen] = useState(false);
-    const [signUpModalIsOpen, setSignUpIsOpen] = useState(false);
+    const [modalIsOpen,setIsOpen] = useState(false);
+    const [signUpModalIsOpen,setSignUpIsOpen] = useState(false);
     // for login form
     function openModal() {
-        setIsOpen(true);
+      setIsOpen(true);
     }
-
-    function closeModal() {
-        setIsOpen(false);
+  
+    function closeModal(){
+      setIsOpen(false);
     }
 
     // for sign Up form
     function openSignUpModal() {
         setSignUpIsOpen(true);
-    }
-
-    function closeSignUpModal() {
+      }
+    
+      function closeSignUpModal(){
         setSignUpIsOpen(false);
-    }
+      }
 
     return (
         <>
             <div className="navbar-bg">
                 <div className="container">
                     <Navbar expand="lg">
-                        <Link to="/home" className="logo ml-3"><img src={logo} alt="" /></Link>
+                        <div className="logo">
+                        <Link to="/home" className="ml-3"><img src={logo} alt="" /></Link>
+                        </div>
                         <Navbar.Toggle className="navbar-hamburger" aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="ml-auto mt-2">
@@ -52,10 +54,10 @@ const Menubar = () => {
                                 <Link className="menu-link" to="/">About Us</Link>
                             </Nav>
                         </Navbar.Collapse>
-                        <button onClick={openSignUpModal} className="menu-link sign-up" to="/signUp">Sign Up</button>
+                        <button onClick={openSignUpModal} className="menu-link sign-up">Sign Up</button>
                         <button onClick={openModal} className="menu-link login-btn" to="/login">LOGIN</button>
                         <LoginForm modalIsOpen={modalIsOpen} closeModal={closeModal} />
-                        <SignUpForm signUpModalIsOpen={signUpModalIsOpen} closeSignUpModal={closeSignUpModal} />
+                        <SignUpForm signUpModalIsOpen={signUpModalIsOpen} closeSignUpModal ={closeSignUpModal} />
                     </Navbar>
                 </div>
             </div>

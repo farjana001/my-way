@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SignUpForm.scss';
 import Modal from 'react-modal';
 import crossMark from '../../images/icon/cross-mark.png';
+import OtpForm from '../OtpForm/OtpForm';
 
 const customStyles = {
     content: {
@@ -22,6 +23,17 @@ const customStyles = {
 Modal.setAppElement('#root')
 
 const SignUpForm = ({ signUpModalIsOpen, closeSignUpModal }) => {
+    const [modalIsOpen, setIsOpen] = useState(false);
+    function openModal(e) {
+        setIsOpen(true);
+        e.preventDefault();
+    }
+
+    function closeModal(e) {
+        setIsOpen(false);
+        e.preventDefault();
+    }
+
     return (
         <div>
             <Modal
@@ -52,10 +64,12 @@ const SignUpForm = ({ signUpModalIsOpen, closeSignUpModal }) => {
                         <div class="form-group">
                             <input type="password" className="form-control form-input" placeholder="Password" />
                         </div>
-                        <div className="sign-up-form-btn text-center"><button type="submit" class="">Sign in</button></div>
+                        <div className="sign-up-form-btn text-center">
+                            <button onClick={openModal}>Sign in</button>
+                        </div>   
                     </form>
                 </div>
-
+                <OtpForm modalIsOpen={modalIsOpen} closeModal={closeModal} />
             </Modal>
         </div>
     );

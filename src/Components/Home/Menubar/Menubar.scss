@@ -76,6 +76,10 @@
     background: none;
     color: $default-color;
 }
+.dropdown-item:active{
+    background: none;
+    color: $default-color;
+}
 .dropdown-item:last-child{
     margin-top: 0;
     border-bottom: none;
@@ -95,3 +99,21 @@
     border-bottom: 5px solid #fff;
     margin: 12px 0px -23px 87px;
   }
+
+  @media screen and (max-width: 498px){
+      .logo{
+        //   margin-right: -230px;
+        margin-left: 60px;
+      }
+   .navbar-hamburger{
+        margin-left: -220px;
+        margin-right: 100px;
+   }
+   .sign-up{
+       margin-right: -30px;
+       margin-left: -50px;
+   }
+   .login-btn{
+    margin-right: -140px;
+   }
+}

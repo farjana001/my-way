@@ -28,6 +28,7 @@ const LoginForm = ({ modalIsOpen, closeModal }) => {
     return (
         <div>
             <Modal
+               
                 isOpen={modalIsOpen}
                 onRequestClose={closeModal}
                 style={customStyles}

@@ -1,0 +1,52 @@
+@import '../../Style/Style';
+
+.arrow-btn>button{
+    background: none;
+    outline: none;
+    border: none;
+}
+.otp-body>h2{
+    text-align: center;
+    font: normal normal 600 22px/30px Segoe UI;
+    color: $default-color;
+    padding: 45px 0;
+}
+.otp-input{
+    border: 1px solid $default-color;
+    width: 60%;
+    display: inline-block;
+    height: 63px;
+    border-radius: 50px;
+}
+.otp-input::placeholder{
+    color: $default-color;
+    font-size: 22px;
+    padding-left: 17px;
+   
+}
+.otp-body>p{
+    color: $default-color;
+    text-align: left;
+    font: normal normal normal 14px/19px Segoe UI;
+    margin: 10px 0 20px 140px;
+}
+.otp-enter-btn{
+    margin-bottom: 142px;
+}
+.otp-enter-btn>button{
+    background-color: $brand-color;
+    border: none;
+    border-radius: 40px;
+    color: #fff;
+    width: 60%;
+    height: 57px;
+    font: normal normal 600 27px/36px Segoe UI;
+}
+.otp-enter-btn>button:hover{
+    background: none;
+    color: $brand-color;
+    transition: all 0.3s ease-out;
+}
+.otp-enter-btn>button:focus{
+    outline: none;
+}

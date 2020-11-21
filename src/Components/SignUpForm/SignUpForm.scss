@@ -34,3 +34,6 @@
     transition: all 0.3s ease-out;
     margin: 25px 0 50px;
 }
+.sign-up-form-btn>button:focus{
+    outline: none;
+}
