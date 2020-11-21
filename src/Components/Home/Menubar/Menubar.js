@@ -6,16 +6,29 @@ import logo from '../../../images/logo/MyWays Logo.png';
 import navbarIcon from '../../../images/icon/Instant logo.png';
 import LoginForm from '../../LoginForm/LoginForm';
 import { useState } from 'react';
+import SignUpForm from '../../SignUpForm/SignUpForm';
 
 const Menubar = () => {
-    const [modalIsOpen,setIsOpen] = useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [signUpModalIsOpen, setSignUpIsOpen] = useState(false);
+    // for login form
     function openModal() {
-      setIsOpen(true);
+        setIsOpen(true);
     }
-  
-    function closeModal(){
-      setIsOpen(false);
+
+    function closeModal() {
+        setIsOpen(false);
     }
+
+    // for sign Up form
+    function openSignUpModal() {
+        setSignUpIsOpen(true);
+    }
+
+    function closeSignUpModal() {
+        setSignUpIsOpen(false);
+    }
+
     return (
         <>
             <div className="navbar-bg">
@@ -39,9 +52,10 @@ const Menubar = () => {
                                 <Link className="menu-link" to="/">About Us</Link>
                             </Nav>
                         </Navbar.Collapse>
-                        <button className="menu-link sign-up" to="/signUp">Sign Up</button>
+                        <button onClick={openSignUpModal} className="menu-link sign-up" to="/signUp">Sign Up</button>
                         <button onClick={openModal} className="menu-link login-btn" to="/login">LOGIN</button>
                         <LoginForm modalIsOpen={modalIsOpen} closeModal={closeModal} />
+                        <SignUpForm signUpModalIsOpen={signUpModalIsOpen} closeSignUpModal={closeSignUpModal} />
                     </Navbar>
                 </div>
             </div>
