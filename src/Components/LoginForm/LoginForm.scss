@@ -12,9 +12,49 @@
     color: #333333;
     font-size: 24px;
     font-weight: 700;
-    margin: 65px 24px;
+    margin: 45px 24px;
+}
+.form-body{
+    border: 1px solid lightgray;
+    padding: 22px 5px 30px 5px;
+    margin-right: 30px;
 }
 .form-body>h4{
     color: $brand-color;
     text-align: center;
+}
+.line{
+    color: $brand-color;
+    width: 50%;
+    border-bottom: 1px solid $brand-color;
+    margin-bottom: 36px;
+}
+.form-input{
+    height: 48px;
+}
+.form-content>p{
+    text-align: right;
+    font: normal normal 600 15px/20px Segoe UI;
+    color: $brand-color;
+    margin: 19px 20px 19px 0;
+}
+.login-form-btn>button{
+    height: 48px;
+    width: 80%;
+    background-color: $brand-color;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    margin-bottom: 18px;
+}
+.login-form-btn>button:hover{
+    background: none;
+    color: $brand-color;
+}
+.login-form-btn>p{
+    color: #000;
+    font: normal normal 600 16px/21px Segoe UI;
 }

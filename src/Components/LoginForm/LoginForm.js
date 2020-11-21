@@ -40,9 +40,20 @@ const LoginForm = ({ modalIsOpen, closeModal }) => {
                 </div>
                 <div className="form-body">
                     <h4>Student</h4>
-                    <form>
-                        <input />
-    
+                    <hr className="line" />
+                    <form className="form-content">
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="email" className="form-control mb-3 form-input" id="inputEmail4" placeholder="Email" />
+                        </div>
+                        <div class="form-group mx-sm-3 mb-2">
+                            <input type="password" className="form-control form-input" id="inputPassword2" placeholder="Password" />
+                        </div>
+                        <p>Forgot Password?</p>
+                        <div className="login-form-btn text-center">
+                            <button>Login</button>
+                            <p>New to MyWays? Sign Up here</p>
+                        </div>
+                        
                     </form>
                 </div>
 
